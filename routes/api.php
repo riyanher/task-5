@@ -24,4 +24,5 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::get('user-detail', [AuthPassportController::class, 'userDetail']);
     Route::post('logout', [AuthPassportController::class, 'logout']);
     Route::apiResource('/categories', App\Http\Controllers\Api\V1\CategoryController::class);
+    Route::apiResource('/posts', App\Http\Controllers\Api\V1\PostController::class);
 });
