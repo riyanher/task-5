@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\V1\AuthPassportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::prefix('v1')->group(function () {
+    Route::post('register', [AuthPassportController::class, 'register']);
+    Route::post('login', [AuthPassportController::class, 'login']);
+});
+Route::middleware('auth:api')->prefix('v1')->group(function () {
+    Route::get('user-detail', [AuthPassportController::class, 'userDetail']);
+    Route::post('logout', [AuthPassportController::class, 'logout']);
+    Route::apiResource('/categories', App\Http\Controllers\Api\V1\CategoryController::class);
 });
