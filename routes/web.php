@@ -22,4 +22,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('/categories', \App\Http\Controllers\CategoryController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('/categories', App\Http\Controllers\CategoryController::class);
+    Route::resource('/posts', App\Http\Controllers\PostController::class);
+});
