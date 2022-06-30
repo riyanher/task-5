@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="row mb-0">
-                            <a href="{{ route('register') }}" class="btn">Or create new account here</a>
+                            <a href="{{ route('register') }}" class="btn btn-link">Or create new account here</a>
                         </div>
                     </form>
                 </div>

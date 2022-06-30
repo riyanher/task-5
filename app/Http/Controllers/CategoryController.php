@@ -46,7 +46,7 @@ class CategoryController extends Controller
         ]);
 
         //redirect to index
-        return redirect()->route('categories.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('categories.index')->with(['success' => 'New Category has been added!']);
     }
 
     /**
@@ -80,7 +80,7 @@ class CategoryController extends Controller
         ]);
 
         //redirect to index
-        return redirect()->route('categories.index')->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->route('categories.index')->with(['success' => 'Category has been updated!']);
     }
 
     /**
@@ -94,6 +94,6 @@ class CategoryController extends Controller
         $category->delete();
 
         //redirect to categories.index
-        return redirect()->route('categories.index')->with(['success' => 'Data Berhasil Dihapus!']);
+        return redirect()->route('categories.index')->with(['success' => 'Category has been deleted!']);
     }
 }

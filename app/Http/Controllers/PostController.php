@@ -52,7 +52,7 @@ class PostController extends Controller
         ]);
 
         //redirect to index
-        return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('posts.index')->with(['success' => 'New Post has been added!']);
     }
 
     public function edit(Post $post)
@@ -100,7 +100,7 @@ class PostController extends Controller
         }
 
         //redirect to index
-        return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->route('posts.index')->with(['success' => 'Post has been updated!']);
     }
 
     public function destroy(Post $post)
@@ -112,6 +112,6 @@ class PostController extends Controller
         $post->delete();
 
         //redirect to index
-        return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Dihapus!']);
+        return redirect()->route('posts.index')->with(['success' => 'Post has been deleted!']);
     }
 }
