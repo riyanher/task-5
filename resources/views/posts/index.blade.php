@@ -39,8 +39,8 @@
                                     </td>
                                 </tr>
                               @empty
-                                  <div class="alert alert-danger">
-                                    There is no post yet.
+                                  <div class="alert alert-danger col-md-6">
+                                    There is no post yet. Click "Add Post" button above to create new post.
                                   </div>
                               @endforelse
                             </tbody>

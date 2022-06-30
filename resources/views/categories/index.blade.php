@@ -30,7 +30,7 @@
                             </td>
                         </tr>
                       @empty
-                          <div class="alert alert-danger">
+                          <div class="col-md-6 alert alert-danger">
                               Category is empty. Click "Add Category" button above to add category.
                           </div>
                       @endforelse
