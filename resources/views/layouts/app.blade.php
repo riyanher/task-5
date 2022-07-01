@@ -14,7 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     {{-- Bootstrap icons --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -30,6 +30,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
         trix-toolbar [data-trix-button-group="file-tools"] {
             display: none;
         }
