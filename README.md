@@ -9,7 +9,12 @@
 
 ## Restful API using Laravel Passport 
 ## Virtual Internship Experience (Investree) - Fullstack - Riyan Hermawan
-
+1. Clone or download the project
+2. Go to the folder application and run `composer install` on your terminal
+3. Copy `.env.example` file to `.env` on the root folder. Open the `.env` and change the database configuration correspond to whatever you have.
+4. Run `php artisan key:generate` to sets the `APP_KEY` value in your `.env` file
+5. Run `php artisan passport:install` to create the encryption keys needed to generate secure access tokens.
+6. Run `php artisan serve`
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
